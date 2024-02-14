@@ -12,7 +12,8 @@
     --background: #EDF0F9;
     --body-background: #1F192D;
     --widget-background: #3A2D54;
-    --main-color: #13bbff;
+    --main-color: aqua;
+    --man-color: #13bbff;
     --other-color: #c3cad5;
     --white: white;
     --black-color: hsl(220, 24%, 12%);
@@ -37,7 +38,6 @@
     --header-height: 3.5rem;
     --font-semi-bold: 600;
     --normal-font-size: .938rem;
-    
     --z-tooltip: 10;
     --z-fixed: 100;
     
@@ -366,6 +366,7 @@ body {
     }
   }  
 /* navbar end */
+
 /* home start */
 .home {
     background-color: var(--bg-color);
@@ -416,14 +417,10 @@ body {
     font-weight: 700;
     margin: -3px 0;
     transition: background-color .3s;
-    /* animation: slideBottom 4s ease forwards; */
-    /* animation-delay: .7s; */
 }
 .home-content p {
     margin-top: 2px;
     font-size: 20px;
-    /* animation: slideRight 5s ease forwards; */
-    /* animation-delay: .7s; */
 }
 .home-sci a {
     display: inline-flex;
@@ -459,8 +456,6 @@ body {
     text-decoration: none;
     font-weight: 600;
     transition: all .50s ease;
-    /* animation: slideTop 4s ease forwards; */
-    /* animation-delay: .1s; */
 }
 .btn-box:hover {
     box-shadow: 0 0 5px var(--main-color), 0 0 25px var(--main-color);
@@ -1028,7 +1023,6 @@ body {
     transform: rotate(calc(((var(--i) - 0) * 0.01turn )));
   }
 /* skills end */
-
 /* servies start */
 .services {
     display: flex;
@@ -1071,15 +1065,8 @@ body {
     transform: translateY(100px);
 }
 .sercontainers .sercard:hover .face.face1 {
+    background: #111;
     transform: translateY(0);
-    box-shadow: inset 0 0 60px whitesmoke,
-                inset 20px 0 80px #f0f,
-                inset -20px 0 80px #0ff,
-                inset 20px 0 300px #f0f,
-                inset -20px 0 300px #0ff, 
-                0 0 50px white,
-                -10px 0 80px #f0f,
-                10px 0 80px #0ff;
 }
 .sercontainers .sercard .face.face1 .contentser {
     opacity: .2;
@@ -1098,6 +1085,7 @@ body {
     font-size: 1em;
     color: white;
     text-align: center;
+    font-family: consolas;
 }
 .sercontainers .sercard .face.face1 .conser a {
     transition: .5s;
@@ -1630,6 +1618,70 @@ body {
     }
 }
 /* about end */
+/* unpam start */
+.unpam {
+    box-sizing: border-box;
+    background-color: var(--bg-color);
+    overflow: hidden;
+}
+.unpamheading h1{
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 90px;
+}
+.unpamcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 65px auto;
+}
+.hero-contentunpam {
+    flex: 1;
+    width: 600px;
+    margin: 0px 25px;
+    animation: fadeInUp 2s ease;
+}
+.hero-contentunpam h2 {
+    font-size: 38px;
+    margin-bottom: 20px;
+    color: #333;
+}
+.hero-contentunpam p {
+    font-size: 24px;
+    line-height: 1.5;
+    margin-bottom: 40px;
+    color: #666;
+}
+.hero-contentunpam button {
+    display: inline-block;
+    background-color: var(--main-color);
+    color: #111;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.hero-contentunpam button:hover {
+    background-color: #111;
+    color: var(--main-color);
+    transform: scale(1.1);
+}
+.hero-imageunpam {
+    flex: 1;
+    width: 600px;
+    margin: auto;
+    animation: fadeInRight 2s ease;
+}
+.hero-imageunpam img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+/* upam end */
 /* video start */
 * {
     padding: 0;
@@ -1695,21 +1747,21 @@ body {
     position: relative;
     border-radius: 65px;
 }
-.control,#current {
+.controli,#currenti {
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding-block: 16px;
 }
-#playbtn {
+#playbtna {
     font-size: 24px;
     color: transparent;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: var(--main-color);
     cursor: pointer;
 }
-#playbtn:hover {
+#playbtna:hover {
     -webkit-text-fill-color: var(--main-color);
 }
 .infoisi {
@@ -1718,11 +1770,11 @@ body {
     align-items: center;
     font-size: 21px;
 }
-#current {
+#currenti {
     text-align: right;
     color: var(--main-color);
 }
-.bar {
+.bariser {
     --space: -4px;
     background: var(--bg-color);
     overflow: hidden;
@@ -1734,7 +1786,7 @@ body {
     border-radius: 64px;
     z-index: -2;
 }
-#progress {
+#progresser {
     display: block;
     width: var(--progress,0%);
     background-color: white;
@@ -1906,7 +1958,7 @@ footer {
     text-decoration: underline;
 }
 .footer-columns h3 {
-    color: var(--text-heading-gray);
+    color: aqua;
     margin-top: 0;
     margin-bottom: 16px;
     font-size: 1rem;
@@ -1935,7 +1987,7 @@ footer {
     flex-wrap: wrap;
     justify-content: space-between;
     color: var(--text-color);
-    border-top: 1px solid var(--border);
+    border-top: 1px solid black;
 }
 .footer-bottom > small {
     font-size: 16px;
@@ -2141,83 +2193,7 @@ footer {
         margin: 0 auto;
     }
 }
-/* responsive end */
-/* cs scrol start */
-::-webkit-scrollbar {
-    width: 15px;
-}
-::-webkit-scrollbar-track {
-    background: #111;
-}
-::-webkit-scrollbar-thumb {
-    background: linear-gradient( #1b1f24, #22282f);
-    /* border-radius: 10px; */
-}
-/* cs scrol end */ 
-/* unpam start */
-.unpam {
-    box-sizing: border-box;
-    background-color: var(--bg-color);
-    overflow: hidden;
-}
-.unpamheading h1{
-    color: white;
-    font-size: 40px;
-    text-align: center;
-    margin-top: 90px;
-}
-.unpamcontainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
-    margin: 65px auto;
-}
-.hero-contentunpam {
-    flex: 1;
-    width: 600px;
-    margin: 0px 25px;
-    animation: fadeInUp 2s ease;
-}
-.hero-contentunpam h2 {
-    font-size: 38px;
-    margin-bottom: 20px;
-    color: #333;
-}
-.hero-contentunpam p {
-    font-size: 24px;
-    line-height: 1.5;
-    margin-bottom: 40px;
-    color: #666;
-}
-.hero-contentunpam button {
-    display: inline-block;
-    background-color: var(--main-color);
-    color: #111;
-    padding: 12px 24px;
-    border-radius: 5px;
-    font-size: 20px;
-    border: none;
-    cursor: pointer;
-    transition: 0.3s ease;
-}
-.hero-contentunpam button:hover {
-    background-color: #111;
-    color: var(--main-color);
-    transform: scale(1.1);
-}
-.hero-imageunpam {
-    flex: 1;
-    width: 600px;
-    margin: auto;
-    animation: fadeInRight 2s ease;
-}
-.hero-imageunpam img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-/* respnsive */
+
 @media screen and (max-width: 768px) {
     .unpamheading h1 {
         font-size: 45px;
@@ -2251,7 +2227,7 @@ footer {
         width: 100%;
     }
 }
-/* unpam end */
+/* responsive end */
 /* animation */
 @keyframes slideRight {
     0% {
@@ -2311,52 +2287,38 @@ footer {
         transform: translateX(0px);
     }
 }
-/* unpam 1 start */
-.abouti {
-    box-sizing: border-box;
-    height: 100vh;
-    width: 100%;
-    background: var(--bg-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@keyframes contentOut{
+    to{
+        transform: translateY(-150px);
+        filter: blur(20px);
+        opacity: 0;
+    }
 }
-.abouti .aboutmain img {
-    width: 580px;
-    max-width: 100%;
-    height: auto;
-    padding: 0 10px;
+@keyframes outFrame{
+    to{
+        width: 150px;
+        height: 220px;
+        bottom: 50px;
+        left: 50%;
+        border-radius: 20px;
+    }
 }
-.all-text {
-    width: 600px;
-    max-width: 100%;
-    padding: 0 10px;
+@keyframes showThumbnail{
+    from{
+        width: 0;
+        opacity: 0;
+    }
 }
-.aboutmain {
-    width: 1290px;
-    max-width: 95%;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
+/* animation end */
+/* cs scrol start */
+::-webkit-scrollbar {
+    width: 15px;
 }
-.all-text h4 {
-    font-size: 30px;
-    color: var(--white);
-    letter-spacing: 1px;
-    font-weight: 400;
-    margin-bottom: 10px;
+::-webkit-scrollbar-track {
+    background: #111;
 }
-.all-text h1 {
-    font-size: 50px;
-    color: #333;
-    font-weight: 700;
-    margin-bottom: 20px;
-    line-height: 40px;
-    margin-bottom: 35px;
+::-webkit-scrollbar-thumb {
+    background: linear-gradient( #111, #111);
+    /* border-radius: 10px; */
 }
-/* .all-text p { */
-    /*  */
-/* } */
-/* unpam 2 end */
+/* cs scrol end */ 
